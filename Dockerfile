@@ -8,6 +8,8 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir psycopg2-binary
+    pip install --no-cache-dir \
+        psycopg2-binary==2.9.3 \
+        boto3==1.28.56
 
 CMD ["bash"]
